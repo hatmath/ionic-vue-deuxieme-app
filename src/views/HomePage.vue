@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
@@ -53,4 +53,56 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue
 #container a {
   text-decoration: none;
 }
-</style>
+</style> -->
+
+<template>
+  <ion-page>
+    <ion-header :translucent="true">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="primary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Page d'accueil</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content :fullscreen="true">
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large">Page d'accueil</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <div id="container">
+        <strong>Ready to create an app?</strong>
+        <p>Start with Ionic</p>
+      </div>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script lang="ts">
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+} from '@ionic/vue';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'HomePage',
+  components: {
+    IonContent,
+    IonHeader,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+    IonButtons,
+    IonMenuButton,
+  },
+});
+</script>
